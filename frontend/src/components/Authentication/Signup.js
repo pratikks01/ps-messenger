@@ -28,7 +28,7 @@ const Signup = () => {
         <FormLabel>Email</FormLabel>
         <Input
           placeholder="Enter you Email"
-          onChange={(e) => setEmail(e.target.value)}
+          onChange={(e) => setPassword(e.target.value)}
         />
       </FormControl>
 
