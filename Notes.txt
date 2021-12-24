@@ -1,0 +1,5 @@
+To achive multiple pages React router dom  V5us used (npm install react-router-dom@5)
+to start the server autom.. when a change is made nodedom is used
+Browser Router is also used
+
+TO fecth api a package axios is used
