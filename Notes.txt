@@ -3,3 +3,8 @@ to start the server autom.. when a change is made nodedom is used
 Browser Router is also used
 
 TO fecth api a package axios is used
+
+REVESIT USER CONTROLLER
+ERROR IN SEARCHING PARTTT
+
+@11:45

@@ -15,8 +15,10 @@ const Login = () => {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
   const [loading, setLoading] = useState(false);
-
   const history = useHistory();
+
+  // backend Authentication of all the details
+  // To prompy user to enter all the details and displaying a toast of Chakra UI if not
 
   const submitHandler = async () => {
     setLoading(true);
@@ -47,6 +49,8 @@ const Login = () => {
       );
 
       // console.log(JSON.stringify(data));
+
+      // After putting all the correct details pormpt of Sucessful Login using Toastt
       toast({
         title: "Login Successful :)",
         status: "success",
@@ -54,12 +58,14 @@ const Login = () => {
         isClosable: true,
         position: "bottom",
       });
+
       localStorage.setItem("userInfo", JSON.stringify(data));
       setLoading(false);
       history.push("/chats");
     } catch (error) {
       toast({
         title: "Error Occured :(",
+        // Check to add Emoji of SAD 🙁 and HAPPY 😄
         description: error.response.data.message,
         status: "error",
         duration: 3000,
@@ -70,6 +76,7 @@ const Login = () => {
     }
   };
 
+  // Setting up the UI of Login page
   return (
     <VStack spacing="10px">
       <FormControl id="email" isRequired>
@@ -81,6 +88,7 @@ const Login = () => {
           onChange={(e) => setEmail(e.target.value)}
         />
       </FormControl>
+
       <FormControl id="password" isRequired>
         <FormLabel>Password</FormLabel>
         <InputGroup size="md">
